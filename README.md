@@ -121,13 +121,28 @@ wsl
 
 # 2. Docker起動（自動起動してない場合）
 sudo service docker start
+```
 
+```
 # 3. AWXを再開
 cd ~/awx
-docker compose up -d
-※ポートフォワード必要なら
-kubectl -n awx port-forward svc/awx-service 8043:80
+※下記でPod確認（自動で立ち上がってるはず）
+>kubectl get pods -n awx
 
+NAME                                               READY   STATUS      RESTARTS      AGE
+awx-operator-controller-manager-85cb47dcc5-v2wj8   2/2     Running     2 (22h ago)   2d1h
+awx-postgres-15-0                                  1/1     Running     0             2d1h
+awx-task-7576b654fc-knpzv                          4/4     Running     0             2d
+awx-web-65dd6b58b8-6b99d                           3/3     Running     0             2d
+```
+
+※ポートフォワード必要なら下記コマンド実行
+
+```
+kubectl -n awx port-forward svc/awx-service 8043:80
+```
+
+```
 # 4. ContainerLabを再構築
 cd ~/container-lab/lab1
 sudo containerlab deploy -t lab1.yml
