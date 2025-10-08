@@ -112,3 +112,28 @@ AWX_TEMPLATE_ID=9
 AWX のジョブテンプレートを経由して安全に `show` コマンドを実行できます。
 
 ---
+
+## 再起動時のメモ
+
+```
+# 1. WSL起動
+wsl
+
+# 2. Docker起動（自動起動してない場合）
+sudo service docker start
+
+# 3. AWXを再開
+cd ~/awx
+docker compose up -d
+
+# 4. ContainerLabを再構築
+cd ~/container-lab/lab1
+sudo containerlab deploy -t lab1.yml
+
+# 5. MCPサーバ再起動
+cd ~/MCPServer_NWTroubleShoot/mcp-awx
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python server.py
+```

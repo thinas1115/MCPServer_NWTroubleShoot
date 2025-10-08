@@ -1,0 +1,5 @@
+# HTTP通信
+requests==2.32.3
+
+# Claude / MCPクライアント用高速MCPライブラリ
+fastmcp>=0.1.4
