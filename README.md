@@ -2,77 +2,106 @@
 
 MCP Server that troubleshooting target network
 
-📘 概要
+---
 
-このリポジトリは、Claude による MCP（Model Context Protocol）連携の PoC 環境を中心に構築された、
-ネットワークトラブルシュート自動化検証用コードです。
-AWX（Ansible Tower）、ContainerLab、VyOS を組み合わせ、
-show コマンドを安全に実行し、結果を MCP 経由で解析することを目的としています。
+## 📘 概要 (Overview)
 
-🧩 ディレクトリ構成
+このリポジトリは、**Claude による MCP（Model Context Protocol）** を用いて  
+ネットワークトラブルシュートを自動化する PoC 環境です。
+
+AWX（Ansible Tower）、ContainerLab、VyOS を組み合わせ、  
+`show` コマンドの安全な実行と MCP 経由での解析を検証します。
+
+---
+
+## 📁 ディレクトリ構成 (Directory Structure)
+
+```
 MCPServer_NWTroubleShoot/
-├─ mcp-awx/ # MCP サーバ本体（Claude 連携のエントリポイント）
-│ ├─ server.py # MCP サーバ
-│ ├─ .env # AWX 接続設定 (URL / Token / JobTemplate ID 等)
-│ ├─ **pycache**/
+├─ mcp-awx/ # MCP サーバ本体 (Claude MCP 連携エントリポイント)
+│ ├─ server.py # MCP⇔AWX 連携サーバ
+│ ├─ .env # AWX 接続情報 (URL / Token / JobTemplate ID)
+│ └─ pycache/
 │
-├─ awx/ # AWX 実行環境（Ansible Execution Environment）
+├─ awx/ # AWX 実行環境 (Ansible Execution Environment)
 │ ├─ Dockerfile.awx-ee-vyos
 │ ├─ execution-environment.yml
 │ ├─ requirements.txt / requirements.yml
 │ └─ context/
 │
-├─ container-lab/ # ContainerLab 構成と検証用 playbook 群
+├─ container-lab/ # ContainerLab 構成と検証用 Playbook 群
 │ └─ lab1/
 │ ├─ lab1.yml
 │ ├─ show.yml / show_pretty.yml
 │ ├─ inventory.yml / vault.yml
 │ └─ configs/, results/, ansible.cfg
 │
-├─ vyos/ # VyOS ISO → Docker イメージ化スクリプトとビルド資材
-│ ├─ Dockerfile
+├─ vyos/ # VyOS ISO → Docker イメージ化スクリプト
 │ ├─ vyos_build.sh
+│ ├─ Dockerfile
 │ ├─ rootfs.tar
-│ ├─ vyos-\*.iso
+│ ├─ vyos-*.iso
 │ └─ live/
 │
-└─ README.md # 本ファイル
+└─ README.md
+```
 
-⚙️ 環境構築と実行
-1️⃣ VyOS イメージビルド
+---
+
+## ⚙️ 環境構築と実行 (Setup & Execution)
+
+### 🧩 1. VyOS イメージビルド
+
+```bash
 cd vyos
 ./vyos_build.sh --iso ./vyos-2025.10.01-0021-rolling-generic-amd64.iso \
- --tag vyos:rolling-2025.10.01
+                --tag vyos:rolling-2025.10.01
+```
 
-ISO から rootfs を抽出し、FROM scratch ベースで Docker 化。
-ContainerLab で利用可能な軽量 VyOS コンテナを生成。
+VyOS ISO から rootfs を抽出し、
+`FROM scratch` ベースで Docker イメージを生成します。
+ContainerLab で利用可能な軽量 VyOS コンテナを作成します。
 
-2️⃣ ContainerLab 起動
+🧱 2. ContainerLab トポロジ起動
+
+```bash
 cd container-lab/lab1
 sudo containerlab deploy -t lab1.yml
+```
 
-VyOS ノードを複数起動し、Ansible/AWX から show コマンドを投げて状態を収集。
+複数の VyOS ノードを構築し、
+AWX 経由で `show` コマンドを実行・収集する環境を起動します。
 
-3️⃣ AWX 実行環境（EE）ビルド
+🧰 3. AWX 実行環境 (Execution Environment) のビルド
+
+```bash
 cd awx
 docker build -t awx-ee-vyos -f Dockerfile.awx-ee-vyos .
+```
 
-vyos.vyos コレクションや paramiko などを含んだ EE を作成。
+含まれる主な要素:
 
-4️⃣ MCP サーバ（mcp-awx）の起動
+`vyos.vyos` コレクション
+
+`paramiko` などの Python 依存モジュール
+
+🧠 4. MCP サーバ起動
+
+```bash
 cd mcp-awx
-pip install -r requirements.txt # （または uv / poetry 等で管理）
+pip install -r requirements.txt
 python server.py
+```
 
-.env 例：
+`.env` 設定例:
 
+```
 AWX_URL=https://awx.local
 AWX_TOKEN=<your-awx-api-token>
 AWX_TEMPLATE_ID=9
+```
 
-Claude や他の MCP クライアントからこのサーバを叩くことで、
-AWX ジョブテンプレート経由で安全に show コマンドを実行・収集できる。
+`Claude` や他の MCP クライアントからこのサーバを叩くことで、
+AWX のジョブテンプレートを経由して安全に `show` コマンドを実行できます。
 
-🧠 検証目的
-
-Claude + AWX MCP による NW トラブルシュートの自動化 PoC
+---
