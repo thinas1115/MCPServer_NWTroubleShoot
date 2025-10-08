@@ -152,5 +152,5 @@ cd ~/MCPServer_NWTroubleShoot/mcp-awx
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python server.py
+fastmcp run server.py
 ```
