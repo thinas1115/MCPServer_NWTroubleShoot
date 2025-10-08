@@ -125,6 +125,8 @@ sudo service docker start
 # 3. AWXを再開
 cd ~/awx
 docker compose up -d
+※ポートフォワード必要なら
+kubectl -n awx port-forward svc/awx-service 8043:80
 
 # 4. ContainerLabを再構築
 cd ~/container-lab/lab1
