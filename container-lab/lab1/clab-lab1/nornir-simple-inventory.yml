@@ -1,0 +1,16 @@
+---
+r1:
+    username: admin
+    password: admin
+    platform: vyosnetworks_vyos
+    hostname: 172.20.20.4
+r2:
+    username: admin
+    password: admin
+    platform: vyosnetworks_vyos
+    hostname: 172.20.20.2
+r3:
+    username: admin
+    password: admin
+    platform: vyosnetworks_vyos
+    hostname: 172.20.20.3

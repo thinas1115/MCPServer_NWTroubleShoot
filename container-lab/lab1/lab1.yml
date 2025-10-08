@@ -1,0 +1,26 @@
+name: lab1
+prefix: "clab"
+
+topology:
+  nodes:
+    r1:
+      kind: vyosnetworks_vyos
+      image: vyos:rolling-2025.10.01
+      startup-config: configs/r1.boot
+      ports: ["2221:22"]
+
+    r2:
+      kind: vyosnetworks_vyos
+      image: vyos:rolling-2025.10.01
+      startup-config: configs/r2.boot
+      ports: ["2222:22"]
+
+    r3:
+      kind: vyosnetworks_vyos
+      image: vyos:rolling-2025.10.01
+      startup-config: configs/r3.boot
+      ports: ["2223:22"]
+
+  links:
+    - endpoints: ["r1:eth1", "r2:eth1"]
+    - endpoints: ["r2:eth2", "r3:eth1"]

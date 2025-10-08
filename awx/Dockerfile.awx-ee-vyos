@@ -1,0 +1,12 @@
+FROM quay.io/ansible/awx-ee:latest
+USER root
+RUN set -eux; \
+    python3 -m ensurepip --upgrade || true; \
+    pip install --no-cache-dir --upgrade pip; \
+    # system-wide と builder 環境の両方に paramiko / pylibssh を入れる
+    pip install --no-cache-dir paramiko ansible-pylibssh; \
+    /opt/builder/venv/bin/pip install --no-cache-dir paramiko ansible-pylibssh || true; \
+    python3 -m pip install --no-cache-dir paramiko ansible-pylibssh || true; \
+    # vyosコレクション導入
+    ansible-galaxy collection install vyos.vyos
+USER 1000

@@ -1,0 +1,1 @@
+"JSON pipe is not supported in operational mode\nException ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>\n\nBrokenPipeError: [Errno 32] Broken pipe"

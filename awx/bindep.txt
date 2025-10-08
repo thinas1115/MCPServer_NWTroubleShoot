@@ -1,0 +1,6 @@
+gcc
+libxml2-dev
+libcurl4-openssl-dev
+libssl-dev
+make
+python3-dev

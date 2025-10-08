@@ -1,0 +1,10 @@
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+  namespace: awx
+spec:
+  admin_user: admin
+  admin_password_secret: awx-admin-password
+  service_type: NodePort
+  projects_persistence: true

@@ -1,0 +1,254 @@
+List of applied migration modules:
+applying /opt/vyatta/etc/config-migrate/migrate/cluster/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/config-management/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/conntrack/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/conntrack/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/conntrack/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/conntrack/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/conntrack/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/conntrack-sync/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/container/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/container/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/container/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/dhcp-relay/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/dhcp-server/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/dhcp-server/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/dhcp-server/6-to-7
+applying /opt/vyatta/etc/config-migrate/migrate/dhcp-server/7-to-8
+applying /opt/vyatta/etc/config-migrate/migrate/dhcp-server/8-to-9
+applying /opt/vyatta/etc/config-migrate/migrate/dhcp-server/9-to-10
+applying /opt/vyatta/etc/config-migrate/migrate/dhcp-server/10-to-11
+applying /opt/vyatta/etc/config-migrate/migrate/dhcpv6-server/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/dhcpv6-server/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/dhcpv6-server/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/dhcpv6-server/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/dhcpv6-server/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/dhcpv6-server/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/dns-dynamic/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/dns-dynamic/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/dns-dynamic/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/dns-dynamic/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/dns-forwarding/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/dns-forwarding/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/dns-forwarding/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/dns-forwarding/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/6-to-7
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/7-to-8
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/8-to-9
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/9-to-10
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/10-to-11
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/11-to-12
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/12-to-13
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/13-to-14
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/14-to-15
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/15-to-16
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/16-to-17
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/17-to-18
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/18-to-19
+applying /opt/vyatta/etc/config-migrate/migrate/firewall/19-to-20
+applying /opt/vyatta/etc/config-migrate/migrate/flow-accounting/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/flow-accounting/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/flow-accounting/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/https/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/https/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/https/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/https/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/https/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/https/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/https/6-to-7
+applying /opt/vyatta/etc/config-migrate/migrate/ids/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/ids/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/6-to-7
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/7-to-8
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/8-to-9
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/9-to-10
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/10-to-11
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/11-to-12
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/12-to-13
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/13-to-14
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/14-to-15
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/15-to-16
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/16-to-17
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/17-to-18
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/18-to-19
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/19-to-20
+applying /opt/vyatta/etc/config-migrate/migrate/interfaces/20-to-21
+Error in /opt/vyatta/etc/config-migrate/migrate/interfaces/20-to-21: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/vyos/compose_config.py", line 56, in apply_func
+    func(self.config_tree)
+  File "/opt/vyatta/etc/config-migrate/migrate/interfaces/20-to-21", line 35, in migrate
+    eth = Ethtool(ifname)
+          ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/vyos/ethtool.py", line 97, in __init__
+    self._base_settings = loads(out)[0]
+                          ^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/vyos/compose_config.py", line 73, in apply_file
+    self.apply_func(func)
+  File "/usr/lib/python3/dist-packages/vyos/compose_config.py", line 60, in apply_func
+    raise ComposeConfigError(e) from e
+vyos.compose_config.ComposeConfigError: Expecting value: line 1 column 1 (char 0)
+
+applying /opt/vyatta/etc/config-migrate/migrate/ipoe-server/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/ipoe-server/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/ipoe-server/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/ipsec/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/ipsec/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/ipsec/6-to-7
+applying /opt/vyatta/etc/config-migrate/migrate/ipsec/7-to-8
+applying /opt/vyatta/etc/config-migrate/migrate/ipsec/8-to-9
+applying /opt/vyatta/etc/config-migrate/migrate/ipsec/9-to-10
+applying /opt/vyatta/etc/config-migrate/migrate/ipsec/10-to-11
+applying /opt/vyatta/etc/config-migrate/migrate/ipsec/11-to-12
+applying /opt/vyatta/etc/config-migrate/migrate/ipsec/12-to-13
+applying /opt/vyatta/etc/config-migrate/migrate/isis/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/isis/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/isis/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/l2tp/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/l2tp/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/l2tp/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/l2tp/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/l2tp/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/l2tp/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/l2tp/6-to-7
+applying /opt/vyatta/etc/config-migrate/migrate/l2tp/7-to-8
+applying /opt/vyatta/etc/config-migrate/migrate/l2tp/8-to-9
+applying /opt/vyatta/etc/config-migrate/migrate/lldp/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/lldp/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/lldp/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/monitoring/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/monitoring/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/nat/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/nat/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/nat/6-to-7
+applying /opt/vyatta/etc/config-migrate/migrate/nat/7-to-8
+applying /opt/vyatta/etc/config-migrate/migrate/nat66/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/nat66/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/nat66/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/nhrp/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/ntp/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/ntp/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/ntp/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/openconnect/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/openconnect/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/openconnect/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/openvpn/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/openvpn/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/openvpn/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/openvpn/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/ospf/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/ospf/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/pim/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/policy/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/policy/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/policy/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/policy/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/policy/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/policy/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/policy/6-to-7
+applying /opt/vyatta/etc/config-migrate/migrate/policy/7-to-8
+applying /opt/vyatta/etc/config-migrate/migrate/policy/8-to-9
+applying /opt/vyatta/etc/config-migrate/migrate/pppoe-server/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/pppoe-server/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/pppoe-server/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/pppoe-server/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/pppoe-server/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/pppoe-server/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/pppoe-server/6-to-7
+applying /opt/vyatta/etc/config-migrate/migrate/pppoe-server/7-to-8
+applying /opt/vyatta/etc/config-migrate/migrate/pppoe-server/8-to-9
+applying /opt/vyatta/etc/config-migrate/migrate/pppoe-server/9-to-10
+applying /opt/vyatta/etc/config-migrate/migrate/pppoe-server/10-to-11
+applying /opt/vyatta/etc/config-migrate/migrate/pptp/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/pptp/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/pptp/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/pptp/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/pptp/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/qos/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/qos/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/quagga/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/quagga/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/quagga/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/quagga/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/quagga/6-to-7
+applying /opt/vyatta/etc/config-migrate/migrate/quagga/7-to-8
+applying /opt/vyatta/etc/config-migrate/migrate/quagga/8-to-9
+applying /opt/vyatta/etc/config-migrate/migrate/quagga/9-to-10
+applying /opt/vyatta/etc/config-migrate/migrate/quagga/10-to-11
+applying /opt/vyatta/etc/config-migrate/migrate/quagga/11-to-12
+applying /opt/vyatta/etc/config-migrate/migrate/bgp/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/bgp/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/bgp/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/bgp/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/bgp/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/bgp/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/bgp/6-to-7
+applying /opt/vyatta/etc/config-migrate/migrate/bgp/7-to-8
+applying /opt/vyatta/etc/config-migrate/migrate/reverse-proxy/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/reverse-proxy/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/reverse-proxy/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/rip/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/rpki/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/rpki/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/salt/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/snmp/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/snmp/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/snmp/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/ssh/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/ssh/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/sstp/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/sstp/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/sstp/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/sstp/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/sstp/4-to-5
+applying /opt/vyatta/etc/config-migrate/migrate/sstp/5-to-6
+applying /opt/vyatta/etc/config-migrate/migrate/system/6-to-7
+applying /opt/vyatta/etc/config-migrate/migrate/system/7-to-8
+applying /opt/vyatta/etc/config-migrate/migrate/system/8-to-9
+applying /opt/vyatta/etc/config-migrate/migrate/system/10-to-11
+applying /opt/vyatta/etc/config-migrate/migrate/system/11-to-12
+applying /opt/vyatta/etc/config-migrate/migrate/system/12-to-13
+applying /opt/vyatta/etc/config-migrate/migrate/system/13-to-14
+applying /opt/vyatta/etc/config-migrate/migrate/system/14-to-15
+applying /opt/vyatta/etc/config-migrate/migrate/system/15-to-16
+applying /opt/vyatta/etc/config-migrate/migrate/system/16-to-17
+applying /opt/vyatta/etc/config-migrate/migrate/system/17-to-18
+applying /opt/vyatta/etc/config-migrate/migrate/system/18-to-19
+applying /opt/vyatta/etc/config-migrate/migrate/system/19-to-20
+applying /opt/vyatta/etc/config-migrate/migrate/system/20-to-21
+applying /opt/vyatta/etc/config-migrate/migrate/system/21-to-22
+applying /opt/vyatta/etc/config-migrate/migrate/system/22-to-23
+applying /opt/vyatta/etc/config-migrate/migrate/system/23-to-24
+applying /opt/vyatta/etc/config-migrate/migrate/system/24-to-25
+applying /opt/vyatta/etc/config-migrate/migrate/system/25-to-26
+applying /opt/vyatta/etc/config-migrate/migrate/system/26-to-27
+applying /opt/vyatta/etc/config-migrate/migrate/system/27-to-28
+applying /opt/vyatta/etc/config-migrate/migrate/system/28-to-29
+applying /opt/vyatta/etc/config-migrate/migrate/vrf/0-to-1
+applying /opt/vyatta/etc/config-migrate/migrate/vrf/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/vrf/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/vrrp/1-to-2
+applying /opt/vyatta/etc/config-migrate/migrate/vrrp/2-to-3
+applying /opt/vyatta/etc/config-migrate/migrate/vrrp/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/wanloadbalance/3-to-4
+applying /opt/vyatta/etc/config-migrate/migrate/webproxy/1-to-2

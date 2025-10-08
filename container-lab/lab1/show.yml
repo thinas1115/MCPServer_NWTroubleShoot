@@ -1,0 +1,75 @@
+---
+- name: Collect info from VyOS
+  hosts: "{{ limit | default('all') }}"
+  gather_facts: no
+
+  vars:
+    # APIやAWXからextra_varsで渡す
+    show_cmds: "{{ show_cmds | default(['show interfaces', 'show ip route']) }}"
+    save_local: "{{ save_local | default(true) }}"
+    save_artifacts: "{{ save_artifacts | default(true) }}"
+
+  tasks:
+    - name: ensure local results dir
+      delegate_to: localhost
+      run_once: true
+      file:
+        path: results
+        state: directory
+        mode: "0755"
+
+    - name: run show commands on VyOS
+      vyos.vyos.vyos_command:
+        commands: "{{ show_cmds }}"
+      register: result
+
+    - name: normalize [{cmd, output}] per host
+      set_fact:
+        cmd_results: "{{ cmd_results | default([]) + [ {'cmd': item.0, 'output': item.1} ] }}"
+      loop: "{{ show_cmds | zip(result.stdout) | list }}"
+
+    - name: print summary
+      debug:
+        msg:
+          - "=== {{ inventory_hostname }} ==="
+          - "{{ result.stdout | join('\n---\n') | truncate(500) }}"
+
+    - name: save outputs locally (optional, combined)
+      when: save_local | bool
+      delegate_to: localhost
+      copy:
+        content: "{{ result.stdout | join('\n---\n') }}"
+        dest: "results/{{ inventory_hostname }}.txt"
+
+    - name: record AWX artifacts (per-host, structured)
+      when: save_artifacts | bool
+      set_stats:
+        per_host: true
+        data:
+          vyos_show_result:
+            host: "{{ inventory_hostname }}"
+            commands: "{{ show_cmds }}"
+            results: "{{ cmd_results }}"
+            combined_output: "{{ result.stdout | join('\n---\n') }}"
+
+  post_tasks:
+    # ★ ここを修正：play_hosts を loop して hostvars[item] を参照
+    - name: build cross-host summary list
+      run_once: true
+      delegate_to: localhost
+      set_fact:
+        _vyos_show_summary: "{{ (_vyos_show_summary | default([])) + [ {
+          'host': item,
+          'commands': (hostvars[item].show_cmds | default([])),
+          'results':  (hostvars[item].cmd_results | default([]))
+        } ] }}"
+      loop: "{{ play_hosts }}"
+
+    - name: push cross-host summary into artifacts
+      when: save_artifacts | bool
+      run_once: true
+      delegate_to: localhost
+      set_stats:
+        data:
+          vyos_show_hosts: "{{ play_hosts }}"
+          vyos_show_summary: "{{ _vyos_show_summary | default([]) }}"

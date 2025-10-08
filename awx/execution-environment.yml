@@ -1,0 +1,18 @@
+version: 3
+
+images:
+  base_image:
+    name: quay.io/ansible/awx-ee:latest
+
+dependencies:
+  galaxy: requirements.yml
+  python: requirements.txt
+
+options:
+  skip_ansible_check: true
+
+additional_build_steps:
+  prepend_final:
+    - RUN /bin/sh -lc 'set -eux; if command -v microdnf >/dev/null 2>&1; then microdnf install -y gcc make python3-devel openssl-devel libffi-devel libxml2-devel libcurl-devel && microdnf clean all; elif command -v dnf >/dev/null 2>&1; then dnf install -y gcc make python3-devel openssl-devel libffi-devel libxml2-devel libcurl-devel && dnf clean all; elif command -v yum >/dev/null 2>&1; then yum install -y gcc make python3-devel openssl-devel libffi-devel libxml2-devel libcurl-devel && yum clean all; elif command -v apt-get >/dev/null 2>&1; then apt-get update && apt-get install -y gcc make python3-dev libssl-dev libffi-dev libxml2-dev libcurl4-openssl-dev && rm -rf /var/lib/apt/lists/*; else echo "no package manager found" && exit 1; fi'
+  append_final:
+    - RUN /bin/sh -lc 'set -eux; python3 -m ensurepip --upgrade || true; python3 -m pip install --no-cache-dir --upgrade pip; python3 -m pip install --no-cache-dir paramiko ansible-pylibssh; ansible-galaxy collection install vyos.vyos'

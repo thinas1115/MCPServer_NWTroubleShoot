@@ -1,0 +1,31 @@
+calling /usr/libexec/vyos/activate/20-ethernet_offload.py
+config-activation error in /usr/libexec/vyos/activate/20-ethernet_offload.py: Error in /usr/libexec/vyos/activate/20-ethernet_offload.py: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/vyos/compose_config.py", line 56, in apply_func
+    func(self.config_tree)
+  File "/usr/libexec/vyos/activate/20-ethernet_offload.py", line 34, in activate
+    eth = Ethtool(ifname)
+          ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/vyos/ethtool.py", line 97, in __init__
+    self._base_settings = loads(out)[0]
+                          ^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/vyos/compose_config.py", line 73, in apply_file
+    self.apply_func(func)
+  File "/usr/lib/python3/dist-packages/vyos/compose_config.py", line 60, in apply_func
+    raise ComposeConfigError(e) from e
+vyos.compose_config.ComposeConfigError: Expecting value: line 1 column 1 (char 0)
+
+calling /usr/libexec/vyos/activate/20-ethernet_offload.py
