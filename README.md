@@ -12,6 +12,13 @@ MCP Server that troubleshooting target network
 AWX（Ansible Tower）、ContainerLab、VyOS を組み合わせ、  
 `show` コマンドの安全な実行と MCP 経由での解析を検証します。
 
+| 項目          | 内容                      |
+| ------------- | ------------------------- |
+| **ホスト OS** | Windows 11                |
+| **仮想環境**  | WSL2 (Ubuntu 22.04.5 LTS) |
+
+![alt text](image.png)
+
 ---
 
 ## 📁 ディレクトリ構成 (Directory Structure)
